@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "booking")
+@Table(name= "bookings")
 public class Booking {
 
     @Id
@@ -29,6 +29,17 @@ public class Booking {
         this.date = date;
         this.course = course;
         this.customer = customer;
+    }
+
+    public Booking() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDate() {
