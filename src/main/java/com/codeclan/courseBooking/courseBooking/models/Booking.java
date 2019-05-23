@@ -17,11 +17,11 @@ public class Booking {
     private String date;
 
     @JsonIgnoreProperties("booking")
-    @OneToMany(mappedBy = "booking", fetch = FetchType.LAZY)
+    @ManyToOne
     Course course;
 
     @JsonIgnoreProperties("booking")
-    @OneToMany(mappedBy = "booking", fetch = FetchType.LAZY)
+    @ManyToOne
     @Column
     Customer customer;
 
